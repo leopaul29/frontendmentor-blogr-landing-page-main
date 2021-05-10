@@ -5,10 +5,11 @@
 body {
   max-width: 1440px;
   margin: auto;
+  font-size: 16px;
 }
 /* HEADER */
 .header {
-  background-color: #ff8f71;
+  background-image: linear-gradient(hsl(13, 100%, 72%), hsl(353, 100%, 62%));
   height: 500px;
   border-bottom-left-radius: 60px;
 }
@@ -57,4 +58,19 @@ body {
   display: flex;
   flex-direction: row;
   gap: 15px;
+}
+/* MAIN */
+.main {
+  margin: 20px;
+}
+.h1{
+  font-size: 24px;
+}
+/* BLOCK 1 */
+.block {
+  text-align: center;
+}
+.block__text{
+  margin-top: 20px;
+  margin-bottom: 50px;
 }
