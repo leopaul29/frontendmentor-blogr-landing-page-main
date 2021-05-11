@@ -4,34 +4,116 @@
   margin: 0;
   padding: 0; }
 
+/* variables */
+/** Primary **/
+/** Neutral **/
+/** Gradient **/
+/* Background gradient - Intro/CTA mobile nav: */
+/* Background gradient - body: */
 /* fonts */
+/** Overpass **/
 @font-face {
   font-family: Overpass-Light;
-  src: url(fonts/Overpass/Overpass-Light.ttf);
+  src: url(../fonts/Overpass/Overpass-Light.ttf);
   font-weight: 300; }
 
-/* variables */
+@font-face {
+  font-family: Overpass-SemiBold;
+  src: url(../fonts/Overpass/Overpass-SemiBold.ttf);
+  font-weight: 600; }
+
+/** Ubuntu **/
+@font-face {
+  font-family: Ubuntu-Regular;
+  src: url(../fonts/Ubuntu/Ubuntu-Regular.ttf);
+  font-weight: 400; }
+
+@font-face {
+  font-family: Ubuntu-Medium;
+  src: url(../fonts/Ubuntu/Ubuntu-Medium.ttf);
+  font-weight: 500; }
+
+@font-face {
+  font-family: Ubuntu-Bold;
+  src: url(../fonts/Ubuntu/Ubuntu-Bold.ttf);
+  font-weight: 700; }
+
+/* base */
 body {
   font-size: 16px;
   font-family: Overpass-Light; }
 
-/* mixins */
 .h1 {
-  font-size: 24px; }
+  font-family: Overpass-SemiBold;
+  font-size: 42px;
+  color: white; }
+
+.h2 {
+  font-family: Overpass-SemiBold;
+  font-size: 32px;
+  color: #1f3f5b; }
+
+.h3 {
+  font-family: Overpass-SemiBold;
+  font-size: 18px;
+  color: #1f3f5b; }
+
+.text {
+  font-size: 16px;
+  font-family: Overpass-Light; }
+
+/* mixins */
+/* frontendmentor */
+.attribution {
+  font-size: 11px;
+  text-align: center; }
+
+.attribution a {
+  color: #3e52a3; }
 
 /* Layout: contains all the CSS that handles the layout, such as the container and any grid systems.*/
+body {
+  max-width: 1440px;
+  margin: auto;
+  background-color: white; }
+
 /* HEADER */
 .header {
-  height: 500px;
-  border-bottom-left-radius: 60px; }
-
-.header__content {
+  border-bottom-left-radius: 60px;
+  background-image: url(../images/bg-pattern-intro.svg), linear-gradient(#ff8f70, #ff3d54);
+  background-position-x: -500px;
+  background-position-y: center;
+  height: 650px;
   display: flex;
   flex-direction: column;
-  max-width: 960px;
-  justify-content: center;
+  align-items: center; }
+  .header__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 960px;
+    margin: 70px 30px; }
+
+/* HEROBANNER */
+.heroBanner {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  padding: 50px; }
+  gap: 15px;
+  color: white; }
+  .heroBanner__title {
+    margin: 0px 20px;
+    text-align: center; }
+  .heroBanner__about {
+    margin: 10px 25px 50px 25px;
+    font-size: 24px;
+    text-align: center; }
+  .heroBanner__buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 15px; }
 
 /* HEADER NAV */
 .header__nav {
@@ -39,55 +121,68 @@ body {
   flex-direction: row;
   justify-content: space-between;
   width: 100%; }
-
-.nav__left {
-  display: flex;
-  flex-direction: row; }
-
-.left__menu {
-  display: flex;
-  flex-direction: row;
-  display: none; }
-
-.nav__right {
-  display: flex;
-  flex-direction: row;
-  display: none; }
-
-.item__dropdown {
-  display: none; }
-
-/* HEROBANNER */
-.nav__heroBanner {
-  margin-top: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-  color: white; }
-
-.heroBanner__buttons {
-  display: flex;
-  flex-direction: row;
-  gap: 15px; }
+  .header__nav .nav__left {
+    display: flex;
+    flex-direction: row; }
+    .header__nav .nav__left .left__menu {
+      display: flex;
+      flex-direction: row;
+      display: none; }
+  .header__nav .nav__right {
+    display: flex;
+    flex-direction: row;
+    display: none; }
 
 /* MAIN */
-.main {
-  margin: 20px; }
+/* BLOCK */
+.block__dark {
+  background-image: linear-gradient(#2c2d3f, #3f4164); }
 
-/* BLOCK 1 */
 .block {
+  margin: 30px;
   text-align: center; }
 
 .block__text {
   margin-top: 20px;
   margin-bottom: 50px; }
 
-/* Components: anything reusable such as buttons, navbars, cards etc.*/
-body {
-  max-width: 1440px;
-  margin: auto; }
+/* FOOTER */
+.footer {
+  background-color: #25252d;
+  color: #c8c8cb; }
 
-/* HEADER */
-.header {
-  background-image: linear-gradient(#ff8f70, #ff3d54); }
+/* Components: anything reusable such as buttons, navbars, cards etc.*/
+/* BUTTON */
+.btn {
+  background-color: black;
+  color: white;
+  border-radius: 30px;
+  width: 150px;
+  height: 50px;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  font-family: Ubuntu-Bold; }
+  .btn:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer; }
+
+.btn-primary {
+  background-color: white;
+  color: #ff525d; }
+  .btn-primary:hover {
+    background-color: #ff525d;
+    color: white; }
+
+.btn-secondary {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white; }
+  .btn-secondary:hover {
+    background-color: white;
+    color: #ff525d; }
+
+/* NAV */
+.item__dropdown {
+  display: none; }
