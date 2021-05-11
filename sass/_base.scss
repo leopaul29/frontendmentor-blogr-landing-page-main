@@ -1,0 +1,25 @@
+/* Base: contained within this file are all your resets, variables, mixins, and any utility classes. */
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* fonts */
+@font-face {
+  font-family: Overpass-Light;
+  src: url(fonts/Overpass/Overpass-Light.ttf);
+  font-weight: 300;
+}
+
+/* variables */
+body {
+  font-size: 16px;
+  font-family: Overpass-Light;
+}
+/* mixins */
+
+.h1 {
+  font-size: 24px;
+}

@@ -1,0 +1,24 @@
+{
+  "name": "frontendmentor-blogr-landing-page-main",
+  "version": "1.0.0",
+  "description": "![Design preview for the Blogr landing page coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile-sass": "node-sass sass/main.scss css/style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leopaul29/frontendmentor-blogr-landing-page-main.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leopaul29/frontendmentor-blogr-landing-page-main/issues"
+  },
+  "homepage": "https://github.com/leopaul29/frontendmentor-blogr-landing-page-main#readme",
+  "devDependencies": {
+    "node-sass": "^6.0.0"
+  }
+}
