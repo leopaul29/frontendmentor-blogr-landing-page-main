@@ -70,6 +70,9 @@ body {
 }
 
 /* MAIN */
+.main {
+  margin-top: 150px;
+}
 
 /* BLOCK */
 .block__dark {
@@ -77,10 +80,27 @@ body {
     $color-gradient-very-dark-gray-blue,
     $color-gradient-very-dark-desaturated-blue
   );
+  border-top-right-radius: 130px;
+  border-bottom-left-radius: 130px;
 }
 .block {
-  margin: 30px;
+  padding: 30px;
   text-align: center;
+  display: grid;
+  grid-template-rows: auto;
+}
+.block__header {
+  grid-row: 1;
+}
+.block--desktop-left {
+}
+.block--mobile-top {
+  grid-row: 2;
+}
+.block--desktop-right {
+}
+.block--mobile-bottom {
+  grid-row: 3;
 }
 .block__text {
   margin-top: 20px;
