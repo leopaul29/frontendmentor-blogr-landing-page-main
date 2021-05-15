@@ -26,6 +26,10 @@ $color-gradient-light-red: hsl(353, 100%, 62%);
 $color-gradient-very-dark-gray-blue: hsl(237, 17%, 21%);
 $color-gradient-very-dark-desaturated-blue: hsl(237, 23%, 32%);
 
+/** Screen size **/
+$screensize-mobile: 600px;// 375px;
+$screensize-desktop: 1440px;
+
 /* fonts */
 /** Overpass **/
 @font-face {
@@ -58,6 +62,7 @@ $color-gradient-very-dark-desaturated-blue: hsl(237, 23%, 32%);
 body {
   font-size: 16px;
   font-family: Overpass-Light;
+  color: $color-very-dark-blue;
 }
 
 .h1 {
@@ -78,6 +83,27 @@ body {
 .text {
   font-size: 16px;
   font-family: Overpass-Light;
+  letter-spacing: 0.2px;
+  line-height: 28px;
+}
+.block__dark {
+  .block__header {
+    color: $color-white;
+  }
+  .text {
+    color: $color-white;
+  }
+}
+@media only screen and (max-width: $screensize-mobile) {
+  .h1 {
+    font-size: 40px;
+  }
+  .h2 {
+    font-size: 30px;
+  }
+  .h3 {
+    font-size: 28px;
+  }
 }
 /* mixins */
 
