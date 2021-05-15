@@ -21,7 +21,7 @@ body {
     justify-content: center;
     align-items: center;
     max-width: 960px;
-    //margin: 70px 30px;
+    margin: 70px 30px;
   }
 }
 /* HEROBANNER */
@@ -77,13 +77,15 @@ body {
   img {
     max-width: 100%;
   }
+  .block {
+    grid-template-rows: auto;
+  }
 }
 /* BLOCK */
 .block {
   padding: 30px;
   text-align: center;
   display: grid;
-  grid-template-rows: auto;
   gap: 50px;
 }
 .block__dark {
@@ -111,6 +113,8 @@ body {
   margin-bottom: 50px;
 }
 /* EDITOR BLOCK */
+#editor {
+}
 
 /* PHONE BLOCK */
 #phone {
@@ -139,7 +143,7 @@ body {
 }
 
 /* LAPTOP */
-#laptop{
+#laptop {
   margin-top: 50px;
 }
 /* FOOTER */
@@ -147,4 +151,40 @@ body {
   background-color: $color-very-dark-black-blue;
   color: $color-grayish-blue;
   border-top-right-radius: 130px;
+  text-align: center;
+  &__logo {
+    margin-bottom: 20px;
+  }
+  &__col {
+  }
+  &__title {
+    margin-bottom: 25px;
+  }
+  &__item {
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (min-width: $screensize-mobile) {
+  .footer {
+    display: flex;
+    justify-content: center;
+    &__content {
+      display: grid;
+      gap: 50px;
+      grid-template-columns: repeat(4, auto);
+      width: 100%;
+      padding: 100px 30px;
+    }
+  }
+}
+@media only screen and (max-width: $screensize-mobile) {
+  .footer {
+    &__content {
+      padding: 100px;
+      display: grid;
+      gap: 50px;
+      grid-template-rows: auto;
+    }
+  }
 }

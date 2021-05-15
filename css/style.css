@@ -110,7 +110,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 960px; }
+    max-width: 960px;
+    margin: 70px 30px; }
 
 /* HEROBANNER */
 .heroBanner {
@@ -155,14 +156,15 @@ body {
 
 @media only screen and (max-width: 600px) {
   img {
-    max-width: 100%; } }
+    max-width: 100%; }
+  .block {
+    grid-template-rows: auto; } }
 
 /* BLOCK */
 .block {
   padding: 30px;
   text-align: center;
   display: grid;
-  grid-template-rows: auto;
   gap: 50px; }
 
 .block__dark {
@@ -212,7 +214,32 @@ body {
 .footer {
   background-color: #25252d;
   color: #c8c8cb;
-  border-top-right-radius: 130px; }
+  border-top-right-radius: 130px;
+  text-align: center; }
+  .footer__logo {
+    margin-bottom: 20px; }
+  .footer__title {
+    margin-bottom: 25px; }
+  .footer__item {
+    margin-bottom: 10px; }
+
+@media only screen and (min-width: 600px) {
+  .footer {
+    display: flex;
+    justify-content: center; }
+    .footer__content {
+      display: grid;
+      gap: 50px;
+      grid-template-columns: repeat(4, auto);
+      width: 100%;
+      padding: 100px 30px; } }
+
+@media only screen and (max-width: 600px) {
+  .footer__content {
+    padding: 100px;
+    display: grid;
+    gap: 50px;
+    grid-template-rows: auto; } }
 
 /* Components: anything reusable such as buttons, navbars, cards etc.*/
 /* HEADER */
@@ -257,3 +284,12 @@ body {
 /* IMG */
 .img--desktop {
   display: none; }
+
+/* FOOTER */
+.footer {
+  font-family: Ubuntu-Regular; }
+  .footer__title {
+    font-family: Ubuntu-Medium;
+    color: white; }
+  .footer__item {
+    cursor: pointer; }

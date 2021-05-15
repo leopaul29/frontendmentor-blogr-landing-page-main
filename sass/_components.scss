@@ -47,3 +47,15 @@
 .img--desktop {
   display: none;
 }
+
+/* FOOTER */
+.footer {
+  font-family: Ubuntu-Regular;
+  &__title {
+    font-family: Ubuntu-Medium;
+    color: $color-white;
+  }
+  &__item {
+    cursor: pointer;
+  }
+}
