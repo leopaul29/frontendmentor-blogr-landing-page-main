@@ -106,6 +106,12 @@ body {
   }
 }
 /* mixins */
+.active {
+  display: block;
+}
+.notActive {
+  display: none;
+}
 
 /* frontendmentor */
 .attribution {
