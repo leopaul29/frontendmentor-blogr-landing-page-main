@@ -15,12 +15,27 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  &__content {
+}
+@media only screen and (max-width: $screensize-mobile) {
+  // mobile screen
+  .header__content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     max-width: 960px;
+    margin: 70px 30px;
+  }
+}
+
+@media only screen and (min-width: $screensize-mobile) {
+  // desktop screen
+  .header__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1440px;
     margin: 70px 30px;
   }
 }
@@ -30,6 +45,15 @@ body {
 }
 @media only screen and (min-width: $screensize-mobile) {
   // desktop screen
+  .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .navbar__menuBurger {
+    display: none;
+  }
 }
 @media only screen and (max-width: $screensize-mobile) {
   // mobile screen

@@ -111,17 +111,37 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center; }
+
+@media only screen and (max-width: 600px) {
   .header__content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     max-width: 960px;
-    margin: 70px 30px; }
+    margin: 70px 30px; } }
+
+@media only screen and (min-width: 600px) {
+  .header__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1440px;
+    margin: 70px 30px; } }
 
 /* NAV */
 .nav__logo {
   cursor: pointer; }
+
+@media only screen and (min-width: 600px) {
+  .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%; }
+  .navbar__menuBurger {
+    display: none; } }
 
 @media only screen and (max-width: 600px) {
   .nav {
@@ -310,55 +330,60 @@ body {
     color: #ff525d; }
 
 /* NAV */
-.navbar__menuGroup {
-  padding: 30px;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
-  .navbar__menuGroup .navbar__menu {
-    margin-bottom: 30px; }
-    .navbar__menuGroup .navbar__menu .menu__item .item__name {
-      margin: 30px;
-      font-family: Overpass-SemiBold;
-      font-size: 20px;
-      color: #1f3f5b;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 10px; }
-      .navbar__menuGroup .navbar__menu .menu__item .item__name .item__arrowUp, .navbar__menuGroup .navbar__menu .menu__item .item__name .item__arrowDown {
-        background-image: url("../images/icon-arrow-dark.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-        width: 20px;
-        height: 20px; }
-      .navbar__menuGroup .navbar__menu .menu__item .item__name .item__arrowDown {
-        transform: rotate(180deg); }
-    .navbar__menuGroup .navbar__menu .menu__item .item__dropdown {
-      background-color: #c8c8cb;
-      padding: 15px 0;
-      font-family: Overpass-SemiBold;
-      color: #1f3f5b;
-      opacity: 0.7; }
-      .navbar__menuGroup .navbar__menu .menu__item .item__dropdown .dropdown__item {
-        margin: 15px; }
-  .navbar__menuGroup .navbar__sign .item__signup:hover {
-    color: white; }
+@media only screen and (min-width: 600px) {
+  .nav__navbar {
+    display: flex;
+    flex-direction: row; } }
 
-.navbar__sign {
-  border-top: solid 1px lightgray;
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
-  .navbar__sign .item__login {
-    font-family: Overpass-SemiBold;
-    font-size: 20px;
-    color: #1f3f5b;
-    margin: 30px;
-    cursor: pointer; }
-  .navbar__sign .item__signup {
-    background-image: linear-gradient(#ff8f70, #ff3d54);
-    height: 50px;
-    font-size: 18px;
-    cursor: pointer; }
+@media only screen and (max-width: 600px) {
+  .navbar__menuGroup {
+    padding: 30px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
+    .navbar__menuGroup .navbar__menu {
+      margin-bottom: 30px; }
+      .navbar__menuGroup .navbar__menu .menu__item .item__name {
+        margin: 30px;
+        font-family: Overpass-SemiBold;
+        font-size: 20px;
+        color: #1f3f5b;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px; }
+        .navbar__menuGroup .navbar__menu .menu__item .item__name .item__arrowUp, .navbar__menuGroup .navbar__menu .menu__item .item__name .item__arrowDown {
+          background-image: url("../images/icon-arrow-dark.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+          width: 20px;
+          height: 20px; }
+        .navbar__menuGroup .navbar__menu .menu__item .item__name .item__arrowDown {
+          transform: rotate(180deg); }
+      .navbar__menuGroup .navbar__menu .menu__item .item__dropdown {
+        background-color: #c8c8cb;
+        padding: 15px 0;
+        font-family: Overpass-SemiBold;
+        color: #1f3f5b;
+        opacity: 0.7; }
+        .navbar__menuGroup .navbar__menu .menu__item .item__dropdown .dropdown__item {
+          margin: 15px; }
+    .navbar__menuGroup .navbar__sign {
+      border-top: solid 1px lightgray;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .navbar__menuGroup .navbar__sign .item__login {
+        font-family: Overpass-SemiBold;
+        font-size: 20px;
+        color: #1f3f5b;
+        margin: 30px;
+        cursor: pointer; }
+      .navbar__menuGroup .navbar__sign .item__signup {
+        background-image: linear-gradient(#ff8f70, #ff3d54);
+        height: 50px;
+        font-size: 18px;
+        cursor: pointer; }
+      .navbar__menuGroup .navbar__sign .item__signup:hover {
+        color: white; } }
 
 /* IMG */
 .img--desktop {
