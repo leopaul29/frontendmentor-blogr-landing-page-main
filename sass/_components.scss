@@ -42,9 +42,27 @@
 
 @media only screen and (min-width: $screensize-mobile) {
   // desktop screen
-  .nav__navbar {
+  .nav {
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    .nav__navbar {
+      width: 100%;
+    }
+  }
+  .navbar__menuGroup {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    .navbar__menu {
+      display: flex;
+      flex-direction: row;
+    }
+    .navbar__sign {
+      display: flex;
+      flex-direction: row;
+    }
   }
 }
 @media only screen and (max-width: $screensize-mobile) {
