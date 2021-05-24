@@ -128,7 +128,6 @@ body {
 
 /* MAIN */
 .main {
-  margin-top: 100px;
 }
 
 @media only screen and (max-width: $screensize-mobile) {
@@ -165,7 +164,7 @@ body {
   grid-row: 3;
 }
 .block__paragraph {
-  padding: 0 55px;
+  padding: 0 24px;
 }
 .block__text {
   margin-top: 20px;
@@ -181,7 +180,7 @@ body {
 @media only screen and (min-width: $screensize-mobile) {
   // desktop screen
   .block {
-    margin: 100px;
+    margin: 0 100px;
   }
   .img--mobile {
     display: none;
@@ -203,11 +202,17 @@ body {
     .block__header {
       grid-column: 1 / 3;
       grid-row: 1;
+      top: 180px;
+      position: relative;
     }
     .block--desktop-left {
       grid-column: 1;
       grid-row: 2;
       margin: auto;
+      .img--desktop {
+        position: relative;
+        width: 170%;
+      }
       .block__paragraph {
         text-align: left;
       }
@@ -215,9 +220,13 @@ body {
     .block--desktop-right {
       grid-column: 2;
       grid-row: 2;
+      margin: auto;
       .img--desktop {
         position: relative;
-        width: 150%;
+        width: 170%;
+      }
+      .block__paragraph {
+        text-align: left;
       }
     }
   }
@@ -295,15 +304,16 @@ body {
   }
   @media only screen and (min-width: $screensize-mobile) {
     // desktop screen
+    margin-top: 100px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     .block--desktop-left {
       grid-column: 1;
       grid-row: 1;
       .img--desktop {
+        width: 170%;
         position: relative;
-        width: 150%;
-        left: -200px;
+        left: -350px;
       }
     }
     .block--desktop-right {
