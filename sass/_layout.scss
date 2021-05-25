@@ -46,40 +46,52 @@ body {
 }
 @media only screen and (min-width: $screensize-mobile) {
   // desktop screen
-  .nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
+  #nav__desktop {
+    display: block;
+    .nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .navbar__menuBurger {
+      display: none;
+    }
   }
-  .navbar__menuBurger {
+  #nav__mobile {
     display: none;
   }
 }
 @media only screen and (max-width: $screensize-mobile) {
   // mobile screen
-  .nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-  }
-  #menuBurger {
-    display: block;
-  }
-  #menuClose {
+  #nav__desktop {
     display: none;
   }
-  .navbar__menuGroup {
-    //display: none;
-  }
-  .navbar__menuGroup--active {
-    background-color: $color-white;
-    position: absolute;
-    top: 150px;
-    left: 30px;
-    right: 30px;
-    text-align: center;
+  #nav__mobile {
+    display: block;
+    .nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+    }
+    #menuBurger {
+      display: block;
+    }
+    #menuClose {
+      display: none;
+    }
+    .navbar__menuGroup {
+      //display: none;
+    }
+    .navbar__menuGroup--active {
+      background-color: $color-white;
+      position: absolute;
+      top: 150px;
+      left: 30px;
+      right: 30px;
+      text-align: center;
+    }
   }
 }
 /* HEROBANNER */
@@ -180,7 +192,6 @@ body {
 @media only screen and (min-width: $screensize-mobile) {
   // desktop screen
   .block {
-    margin: 0 100px;
   }
   .img--mobile {
     display: none;

@@ -144,31 +144,39 @@ body {
   cursor: pointer; }
 
 @media only screen and (min-width: 600px) {
-  .nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%; }
-  .navbar__menuBurger {
+  #nav__desktop {
+    display: block; }
+    #nav__desktop .nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%; }
+    #nav__desktop .navbar__menuBurger {
+      display: none; }
+  #nav__mobile {
     display: none; } }
 
 @media only screen and (max-width: 600px) {
-  .nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%; }
-  #menuBurger {
-    display: block; }
-  #menuClose {
+  #nav__desktop {
     display: none; }
-  .navbar__menuGroup--active {
-    background-color: white;
-    position: absolute;
-    top: 150px;
-    left: 30px;
-    right: 30px;
-    text-align: center; } }
+  #nav__mobile {
+    display: block; }
+    #nav__mobile .nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%; }
+    #nav__mobile #menuBurger {
+      display: block; }
+    #nav__mobile #menuClose {
+      display: none; }
+    #nav__mobile .navbar__menuGroup--active {
+      background-color: white;
+      position: absolute;
+      top: 150px;
+      left: 30px;
+      right: 30px;
+      text-align: center; } }
 
 /* HEROBANNER */
 .heroBanner {
@@ -249,8 +257,6 @@ body {
     display: none; } }
 
 @media only screen and (min-width: 600px) {
-  .block {
-    margin: 0 100px; }
   .img--mobile {
     display: none; }
   .img--desktop {
@@ -457,6 +463,8 @@ body {
         justify-content: center;
         align-items: center;
         gap: 10px; }
+        .navbar__menuGroup .navbar__menu .menu__item .item__name .item__title {
+          cursor: pointer; }
         .navbar__menuGroup .navbar__menu .menu__item .item__name .item__arrowUp, .navbar__menuGroup .navbar__menu .menu__item .item__name .item__arrowDown {
           background-image: url("../images/icon-arrow-dark.svg");
           background-repeat: no-repeat;
@@ -472,7 +480,8 @@ body {
         color: #1f3f5b;
         opacity: 0.7; }
         .navbar__menuGroup .navbar__menu .menu__item .item__dropdown .dropdown__item {
-          margin: 15px; }
+          margin: 15px;
+          cursor: pointer; }
     .navbar__menuGroup .navbar__sign {
       border-top: solid 1px lightgray;
       display: flex;
