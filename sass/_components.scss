@@ -6,7 +6,7 @@
 /* BUTTON */
 .btn {
   background-color: black;
-  color: white;
+  color: $color-white;
   border-radius: 30px;
   width: 150px;
   height: 50px;
@@ -39,9 +39,15 @@
 }
 
 /* NAV */
-
 @media only screen and (min-width: $screensize-mobile) {
   // desktop screen
+  .arrowLight {
+    background-image: url("../images/icon-arrow-light.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+  }
   .nav {
     display: flex;
     flex-direction: row;
@@ -58,15 +64,46 @@
     .navbar__menu {
       display: flex;
       flex-direction: row;
+      .item__name {
+        height: 40px;
+        .item__title {
+          font-family: Ubuntu-Bold;
+          color: $color-white;
+          cursor: pointer;
+        }
+        .item__arrowUp {
+          @extend .arrowLight;
+        }
+        .item__arrowDown {
+          @extend .arrowLight;
+          transform: rotate(180deg);
+        }
+      }
+      .item__name:hover {
+        height: 37px;
+        border-bottom: 3px solid $color-white;
+      }
     }
     .navbar__sign {
       display: flex;
       flex-direction: row;
+      .item__login {
+        cursor: pointer;
+        font-family: Ubuntu-Bold;
+        color: $color-white;
+      }
     }
   }
 }
 @media only screen and (max-width: $screensize-mobile) {
   // mobile screen
+  .arrowDark {
+    background-image: url("../images/icon-arrow-dark.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+  }
   .navbar__menuGroup {
     padding: 30px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
@@ -86,11 +123,7 @@
             cursor: pointer;
           }
           .item__arrowUp {
-            background-image: url("../images/icon-arrow-dark.svg");
-            background-repeat: no-repeat;
-            background-position: center;
-            width: 20px;
-            height: 20px;
+            @extend .arrowDark;
           }
           .item__arrowDown {
             @extend .item__arrowUp;
@@ -148,5 +181,8 @@
   }
   &__item {
     cursor: pointer;
+    &:hover {
+      text-decoration: $color-white underline;
+    }
   }
 }

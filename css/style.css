@@ -112,7 +112,7 @@ body {
 /* HEADER */
 .header {
   border-bottom-left-radius: 60px;
-  background-image: url(../images/bg-pattern-intro.svg), linear-gradient(#ff8f70, #ff3d54);
+  background-image: url(../images/bg-pattern-intro.svg), linear-gradient(180deg, #ff8f70, #ff3d54);
   background-position-x: -500px;
   background-position-y: center;
   height: 650px;
@@ -151,8 +151,24 @@ body {
       flex-direction: row;
       justify-content: space-between;
       width: 100%; }
-    #nav__desktop .navbar__menuBurger {
-      display: none; }
+    #nav__desktop .navbar__menu {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 50px; }
+      #nav__desktop .navbar__menu .menu__item .item__name {
+        display: flex;
+        flex-direction: row;
+        align-items: center; }
+      #nav__desktop .navbar__menu .menu__item .item__dropdown {
+        display: none; }
+    #nav__desktop .navbar__sign {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 30px; }
   #nav__mobile {
     display: none; } }
 
@@ -430,6 +446,12 @@ body {
 
 /* NAV */
 @media only screen and (min-width: 600px) {
+  .arrowLight, .navbar__menuGroup .navbar__menu .item__name .item__arrowUp, .navbar__menuGroup .navbar__menu .menu__item .item__name .item__arrowDown, .navbar__menuGroup .navbar__menu .item__name .item__arrowDown {
+    background-image: url("../images/icon-arrow-light.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 20px;
+    height: 20px; }
   .nav {
     display: flex;
     flex-direction: row;
@@ -444,11 +466,32 @@ body {
     .navbar__menuGroup .navbar__menu {
       display: flex;
       flex-direction: row; }
+      .navbar__menuGroup .navbar__menu .item__name {
+        height: 40px; }
+        .navbar__menuGroup .navbar__menu .item__name .item__title {
+          font-family: Ubuntu-Bold;
+          color: white;
+          cursor: pointer; }
+        .navbar__menuGroup .navbar__menu .item__name .item__arrowDown {
+          transform: rotate(180deg); }
+      .navbar__menuGroup .navbar__menu .item__name:hover {
+        height: 37px;
+        border-bottom: 3px solid white; }
     .navbar__menuGroup .navbar__sign {
       display: flex;
-      flex-direction: row; } }
+      flex-direction: row; }
+      .navbar__menuGroup .navbar__sign .item__login {
+        cursor: pointer;
+        font-family: Ubuntu-Bold;
+        color: white; } }
 
 @media only screen and (max-width: 600px) {
+  .arrowDark, .navbar__menuGroup .navbar__menu .menu__item .item__name .item__arrowUp, .navbar__menuGroup .navbar__menu .menu__item .item__name .item__arrowDown {
+    background-image: url("../images/icon-arrow-dark.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 20px;
+    height: 20px; }
   .navbar__menuGroup {
     padding: 30px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
@@ -465,12 +508,6 @@ body {
         gap: 10px; }
         .navbar__menuGroup .navbar__menu .menu__item .item__name .item__title {
           cursor: pointer; }
-        .navbar__menuGroup .navbar__menu .menu__item .item__name .item__arrowUp, .navbar__menuGroup .navbar__menu .menu__item .item__name .item__arrowDown {
-          background-image: url("../images/icon-arrow-dark.svg");
-          background-repeat: no-repeat;
-          background-position: center;
-          width: 20px;
-          height: 20px; }
         .navbar__menuGroup .navbar__menu .menu__item .item__name .item__arrowDown {
           transform: rotate(180deg); }
       .navbar__menuGroup .navbar__menu .menu__item .item__dropdown {
@@ -509,3 +546,5 @@ body {
     color: white; }
   .footer__item {
     cursor: pointer; }
+    .footer__item:hover {
+      text-decoration: white underline; }
