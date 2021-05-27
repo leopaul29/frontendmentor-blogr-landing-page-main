@@ -112,9 +112,9 @@ body {
 /* HEADER */
 .header {
   border-bottom-left-radius: 60px;
-  background-image: url(../images/bg-pattern-intro.svg), linear-gradient(180deg, #ff8f70, #ff3d54);
-  background-position-x: -500px;
-  background-position-y: center;
+  background-image: url(../images/bg-pattern-intro.svg), linear-gradient(90deg, #ff8f70, #ff3d54);
+  background-position-x: -500px, 0;
+  background-position-y: center, 0;
   height: 650px;
   display: flex;
   flex-direction: column;
@@ -182,6 +182,10 @@ body {
       flex-direction: row;
       justify-content: space-between;
       width: 100%; }
+    #nav__mobile .nav__header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
     #nav__mobile #menuBurger {
       display: block; }
     #nav__mobile #menuClose {
@@ -381,10 +385,7 @@ body {
 .footer {
   background-color: #25252d;
   color: #c8c8cb;
-  border-top-right-radius: 130px;
-  text-align: center; }
-  .footer__logo {
-    margin-bottom: 20px; }
+  border-top-right-radius: 130px; }
   .footer__title {
     margin-bottom: 30px; }
   .footer__item {
@@ -393,20 +394,25 @@ body {
 @media only screen and (min-width: 600px) {
   .footer {
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    text-align: left; }
     .footer__content {
       display: grid;
       gap: 50px;
       grid-template-columns: repeat(4, auto);
       width: 100%;
-      padding: 100px 30px; } }
+      padding: 100px 200px; } }
 
 @media only screen and (max-width: 600px) {
-  .footer__content {
-    padding: 100px;
-    display: grid;
-    gap: 50px;
-    grid-template-rows: auto; } }
+  .footer {
+    text-align: center; }
+    .footer__content {
+      padding: 100px;
+      display: grid;
+      gap: 50px;
+      grid-template-rows: auto; }
+    .footer__logo {
+      margin-bottom: 20px; } }
 
 /* Components: anything reusable such as buttons, navbars, cards etc.*/
 /* HEADER */
@@ -472,11 +478,10 @@ body {
           font-family: Ubuntu-Bold;
           color: white;
           cursor: pointer; }
+          .navbar__menuGroup .navbar__menu .item__name .item__title:hover {
+            text-decoration: white underline 2px; }
         .navbar__menuGroup .navbar__menu .item__name .item__arrowDown {
           transform: rotate(180deg); }
-      .navbar__menuGroup .navbar__menu .item__name:hover {
-        height: 37px;
-        border-bottom: 3px solid white; }
     .navbar__menuGroup .navbar__sign {
       display: flex;
       flex-direction: row; }

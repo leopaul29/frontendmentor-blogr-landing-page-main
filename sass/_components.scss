@@ -70,6 +70,9 @@
           font-family: Ubuntu-Bold;
           color: $color-white;
           cursor: pointer;
+          &:hover{
+            text-decoration: white underline 2px;
+          }
         }
         .item__arrowUp {
           @extend .arrowLight;
@@ -78,10 +81,6 @@
           @extend .arrowLight;
           transform: rotate(180deg);
         }
-      }
-      .item__name:hover {
-        height: 37px;
-        border-bottom: 3px solid $color-white;
       }
     }
     .navbar__sign {

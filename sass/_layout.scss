@@ -8,9 +8,14 @@ body {
 .header {
   border-bottom-left-radius: 60px;
   background-image: url(../images/bg-pattern-intro.svg),
-    linear-gradient(180deg, $color-gradient-very-light-red, $color-gradient-light-red);
-  background-position-x: -500px;
-  background-position-y: center;
+    linear-gradient(
+      90deg,
+      $color-gradient-very-light-red,
+      $color-gradient-light-red
+    );
+
+  background-position-x: -500px, 0;
+  background-position-y: center, 0;
   height: 650px;
   display: flex;
   flex-direction: column;
@@ -95,6 +100,11 @@ body {
       flex-direction: row;
       justify-content: space-between;
       width: 100%;
+    }
+    .nav__header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
     }
     #menuBurger {
       display: block;
@@ -363,10 +373,6 @@ body {
   background-color: $color-very-dark-black-blue;
   color: $color-grayish-blue;
   border-top-right-radius: 130px;
-  text-align: center;
-  &__logo {
-    margin-bottom: 20px;
-  }
   &__col {
   }
   &__title {
@@ -382,23 +388,28 @@ body {
   .footer {
     display: flex;
     justify-content: center;
+    text-align: left;
     &__content {
       display: grid;
       gap: 50px;
       grid-template-columns: repeat(4, auto);
       width: 100%;
-      padding: 100px 30px;
+      padding: 100px 200px;
     }
   }
 }
 @media only screen and (max-width: $screensize-mobile) {
   // mobile screen
   .footer {
+    text-align: center;
     &__content {
       padding: 100px;
       display: grid;
       gap: 50px;
       grid-template-rows: auto;
+    }
+    &__logo {
+      margin-bottom: 20px;
     }
   }
 }

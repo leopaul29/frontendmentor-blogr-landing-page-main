@@ -16,6 +16,7 @@
   <header class="header">
     <div class="header__content">
       <nav class="nav">
+        <!-- nav__desktop -->
         <div id="nav__desktop" class="nav__navbar">
           <div class="navbar__menuGroup">
             <div class="navbar__menu">
@@ -25,7 +26,7 @@
               <div class="menu__item">
                 <div class="item__name">
                   <div class="item__title">Product</div>
-                  <div class="item__arrowUp"></div>
+                  <div class="item__arrow item__arrowUp"></div>
                 </div>
                 <div class="item__dropdown">
                   <div class="dropdown__item">Overview</div>
@@ -38,7 +39,7 @@
               <div class="menu__item item__name--active">
                 <div class="item__name">
                   <div class="item__title">Company</div>
-                  <div class="item__arrowDown"></div>
+                  <div class="item__arrow item__arrowUp"></div>
                 </div>
                 <div class="item__dropdown">
                   <div class="dropdown__item">About</div>
@@ -50,7 +51,7 @@
               <div class="menu__item">
                 <div class="item__name">
                   <div class="item__title">Connect</div>
-                  <div class="item__arrowUp"></div>
+                  <div class="item__arrow item__arrowUp"></div>
                 </div>
                 <div class="item__dropdown">
                   <div class="dropdown__item">Contact</div>
@@ -66,19 +67,22 @@
           </div>
         </div>
         <div id="nav__mobile" class="nav__navbar">
-          <div class="nav__logo">
-            <img src="images/logo.svg" alt="logo" class="nav__logo">
+          <!-- nav__mobile -->
+          <div class="nav__header">
+            <div class="nav__logo">
+              <img src="images/logo.svg" alt="logo" class="nav__logo">
+            </div>
+            <span class="navbar__menuBurger">
+              <img id="menuBurger" src="images/icon-hamburger.svg" alt="open menu">
+              <img id="menuClose" src="images/icon-close.svg" alt="close menu">
+            </span>
           </div>
-          <span class="navbar__menuBurger">
-            <img id="menuBurger" src="images/icon-hamburger.svg" alt="open menu">
-            <img id="menuClose" src="images/icon-close.svg" alt="close menu">
-          </span>
           <div class="navbar__menuGroup navbar__menuGroup--active">
             <div class="navbar__menu">
               <div class="menu__item">
                 <div class="item__name">
                   <div class="item__title">Product</div>
-                  <div class="item__arrowUp"></div>
+                  <div class="item__arrow item__arrowUp"></div>
                 </div>
                 <div class="item__dropdown">
                   <div class="dropdown__item">Overview</div>
@@ -91,7 +95,7 @@
               <div class="menu__item item__name--active">
                 <div class="item__name">
                   <div class="item__title">Company</div>
-                  <div class="item__arrowDown"></div>
+                  <div class="item__arrow item__arrowUp"></div>
                 </div>
                 <div class="item__dropdown">
                   <div class="dropdown__item">About</div>
@@ -103,7 +107,7 @@
               <div class="menu__item">
                 <div class="item__name">
                   <div class="item__title">Connect</div>
-                  <div class="item__arrowUp"></div>
+                  <div class="item__arrow item__arrowUp"></div>
                 </div>
                 <div class="item__dropdown">
                   <div class="dropdown__item">Contact</div>
@@ -206,7 +210,6 @@
 
   <footer class="footer">
     <div class="footer__content">
-
       <div class="footer__logo">
         <img src="images/logo.svg" alt="footer logo">
       </div>
@@ -243,6 +246,8 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="https://github.com/leopaul29">Léo-Paul MARTIN</a>.
   </div>
+
+  <script src="main.js"></script>
 </body>
 
 </html>
