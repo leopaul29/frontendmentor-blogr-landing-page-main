@@ -185,3 +185,22 @@
     }
   }
 }
+
+/* OTHER */
+.side-crop {
+  width: 100%; /*container-width*/
+  overflow: hidden; /*hide bounds of image */
+  margin: 0; /*reset margin of figure tag*/
+}
+@media only screen and (max-width: $screensize-mobile) {
+  // mobile screen
+  .side-crop .img--mobile img {
+    display: block; /*remove inline-block spaces*/
+  }
+}
+@media only screen and (min-width: $screensize-mobile) {
+  // desktop screen
+  .side-crop .img--desktop img {
+    display: block; /*remove inline-block spaces*/
+  }
+}

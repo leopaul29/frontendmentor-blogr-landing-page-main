@@ -105,6 +105,7 @@ body {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      min-width: 400px
     }
     #menuBurger {
       display: block;
@@ -147,32 +148,8 @@ body {
     gap: 15px;
   }
 }
-/* HEADER NAV */
-/*.header__nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  .nav__left {
-    display: flex;
-    flex-direction: row;
-    .left__menu {
-      display: flex;
-      flex-direction: row;
-      display: none;
-    }
-  }
-  .nav__right {
-    display: flex;
-    flex-direction: row;
-    display: none;
-  }
-}*/
 
 /* MAIN */
-.main {
-}
-
 @media only screen and (max-width: $screensize-mobile) {
   // mobile screen
   img {
@@ -251,10 +228,6 @@ body {
       grid-column: 1;
       grid-row: 2;
       margin: auto;
-      .img--desktop {
-        position: relative;
-        width: 170%;
-      }
       .block__paragraph {
         text-align: left;
       }
@@ -264,8 +237,8 @@ body {
       grid-row: 2;
       margin: auto;
       .img--desktop {
-        position: relative;
         width: 170%;
+        position: relative;
       }
       .block__paragraph {
         text-align: left;
