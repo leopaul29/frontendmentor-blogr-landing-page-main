@@ -191,7 +191,10 @@ body {
       display: block; }
     #nav__mobile #menuClose {
       display: none; }
+    #nav__mobile .navbar__menuGroup {
+      display: none; }
     #nav__mobile .navbar__menuGroup--active {
+      display: block;
       background-color: white;
       position: absolute;
       top: 150px;
@@ -429,7 +432,7 @@ body {
 
 /* NAV */
 @media only screen and (min-width: 600px) {
-  .arrowLight, .navbar__menuGroup .navbar__menu .item__name .item__arrowUp, .navbar__menuGroup .navbar__menu .menu__item .item__name .item__arrowDown, .navbar__menuGroup .navbar__menu .item__name .item__arrowDown {
+  .arrowLight, .navbar__menuGroup .navbar__menu .menu__item .item__name .item__arrowUp, .navbar__menuGroup .navbar__menu .menu__item .item__name .item__arrowDown {
     background-image: url("../images/icon-arrow-light.svg");
     background-repeat: no-repeat;
     background-position: center;
@@ -449,16 +452,31 @@ body {
     .navbar__menuGroup .navbar__menu {
       display: flex;
       flex-direction: row; }
-      .navbar__menuGroup .navbar__menu .item__name {
+      .navbar__menuGroup .navbar__menu .menu__item .item__name {
         height: 40px; }
-        .navbar__menuGroup .navbar__menu .item__name .item__title {
+        .navbar__menuGroup .navbar__menu .menu__item .item__name .item__title {
           font-family: Ubuntu-Bold;
           color: white;
           cursor: pointer; }
-          .navbar__menuGroup .navbar__menu .item__name .item__title:hover {
+          .navbar__menuGroup .navbar__menu .menu__item .item__name .item__title:hover {
             text-decoration: white underline 2px; }
-        .navbar__menuGroup .navbar__menu .item__name .item__arrowDown {
+        .navbar__menuGroup .navbar__menu .menu__item .item__name .item__arrowDown {
           transform: rotate(180deg); }
+      .navbar__menuGroup .navbar__menu .menu__item .item__dropdown--active {
+        display: block !important;
+        position: absolute;
+        width: 150px;
+        height: 120px;
+        background-color: white;
+        border-radius: 5px; }
+        .navbar__menuGroup .navbar__menu .menu__item .item__dropdown--active .dropdown__item {
+          margin: 15px 20px;
+          width: max-content;
+          font-family: Ubuntu-Regular;
+          cursor: pointer;
+          color: #2c2d3f; }
+        .navbar__menuGroup .navbar__menu .menu__item .item__dropdown--active .dropdown__item--active {
+          font-family: Ubuntu-Bold; }
     .navbar__menuGroup .navbar__sign {
       display: flex;
       flex-direction: row; }
@@ -493,6 +511,7 @@ body {
         .navbar__menuGroup .navbar__menu .menu__item .item__name .item__arrowDown {
           transform: rotate(180deg); }
       .navbar__menuGroup .navbar__menu .menu__item .item__dropdown {
+        display: none;
         background-color: #c8c8cb;
         padding: 15px 0;
         font-family: Overpass-SemiBold;
@@ -501,6 +520,8 @@ body {
         .navbar__menuGroup .navbar__menu .menu__item .item__dropdown .dropdown__item {
           margin: 15px;
           cursor: pointer; }
+      .navbar__menuGroup .navbar__menu .menu__item .item__dropdown--active {
+        display: block; }
     .navbar__menuGroup .navbar__sign {
       border-top: solid 1px lightgray;
       display: flex;

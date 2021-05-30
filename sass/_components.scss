@@ -64,22 +64,42 @@
     .navbar__menu {
       display: flex;
       flex-direction: row;
-      .item__name {
-        height: 40px;
-        .item__title {
-          font-family: Ubuntu-Bold;
-          color: $color-white;
-          cursor: pointer;
-          &:hover {
-            text-decoration: white underline 2px;
+      .menu__item {
+        .item__name {
+          height: 40px;
+          .item__title {
+            font-family: Ubuntu-Bold;
+            color: $color-white;
+            cursor: pointer;
+            &:hover {
+              text-decoration: white underline 2px;
+            }
+          }
+          .item__arrowUp {
+            @extend .arrowLight;
+          }
+          .item__arrowDown {
+            @extend .arrowLight;
+            transform: rotate(180deg);
           }
         }
-        .item__arrowUp {
-          @extend .arrowLight;
-        }
-        .item__arrowDown {
-          @extend .arrowLight;
-          transform: rotate(180deg);
+        .item__dropdown--active {
+          display: block !important;
+          position: absolute;
+          width: 150px;
+          height: 120px;
+          background-color: $color-white;
+          border-radius: 5px;
+          .dropdown__item {
+            margin: 15px 20px;
+            width: max-content;
+            font-family: Ubuntu-Regular;
+            cursor: pointer;
+            color: $color-gradient-very-dark-gray-blue;
+          }
+          .dropdown__item--active {
+            font-family: Ubuntu-Bold;
+          }
         }
       }
     }
@@ -130,7 +150,7 @@
           }
         }
         .item__dropdown {
-          //display: none;
+          display: none;
           background-color: $color-grayish-blue;
           padding: 15px 0;
           font-family: Overpass-SemiBold;
@@ -140,6 +160,9 @@
             margin: 15px;
             cursor: pointer;
           }
+        }
+        .item__dropdown--active {
+          display: block;
         }
       }
     }

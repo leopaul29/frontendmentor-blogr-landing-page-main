@@ -114,9 +114,10 @@ body {
       display: none;
     }
     .navbar__menuGroup {
-      //display: none;
+      display: none;
     }
     .navbar__menuGroup--active {
+      display: block;
       background-color: $color-white;
       position: absolute;
       top: 150px;

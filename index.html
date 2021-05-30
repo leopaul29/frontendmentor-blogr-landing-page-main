@@ -23,7 +23,7 @@
               <div class="nav__logo">
                 <img src="images/logo.svg" alt="logo" class="nav__logo">
               </div>
-              <div class="menu__item">
+              <div class="menu__item" onclick="clickDesktopItemNav()">
                 <div class="item__name">
                   <div class="item__title">Product</div>
                   <div class="item__arrow item__arrowUp"></div>
@@ -36,7 +36,7 @@
                   <div class="dropdown__item">Integrations</div>
                 </div>
               </div>
-              <div class="menu__item item__name--active">
+              <div class="menu__item">
                 <div class="item__name">
                   <div class="item__title">Company</div>
                   <div class="item__arrow item__arrowUp"></div>
@@ -48,14 +48,14 @@
                   <div class="dropdown__item">Careers</div>
                 </div>
               </div>
-              <div class="menu__item">
+              <div class="menu__item item__name--active">
                 <div class="item__name">
                   <div class="item__title">Connect</div>
-                  <div class="item__arrow item__arrowUp"></div>
+                  <div class="item__arrow item__arrowDown"></div>
                 </div>
-                <div class="item__dropdown">
+                <div class="item__dropdown item__dropdown--active">
                   <div class="dropdown__item">Contact</div>
-                  <div class="dropdown__item">Newsletter</div>
+                  <div class="dropdown__item dropdown__item--active">Newsletter</div>
                   <div class="dropdown__item">LinkedIn</div>
                 </div>
               </div>
@@ -66,15 +66,15 @@
             </div>
           </div>
         </div>
+        <!-- nav__mobile -->
         <div id="nav__mobile" class="nav__navbar">
-          <!-- nav__mobile -->
           <div class="nav__header">
             <div class="nav__logo">
               <img src="images/logo.svg" alt="logo" class="nav__logo">
             </div>
             <span class="navbar__menuBurger">
-              <img id="menuBurger" src="images/icon-hamburger.svg" alt="open menu">
-              <img id="menuClose" src="images/icon-close.svg" alt="close menu">
+              <img id="menuBurger" src="images/icon-hamburger.svg" alt="open menu" onclick="openMenuBurger()">
+              <img id="menuClose" src="images/icon-close.svg" alt="close menu" onclick="closeMenuBurger()">
             </span>
           </div>
           <div class="navbar__menuGroup navbar__menuGroup--active">
@@ -92,7 +92,7 @@
                   <div class="dropdown__item">Integrations</div>
                 </div>
               </div>
-              <div class="menu__item item__name--active">
+              <div class="menu__item ">
                 <div class="item__name">
                   <div class="item__title">Company</div>
                   <div class="item__arrow item__arrowUp"></div>
@@ -104,12 +104,12 @@
                   <div class="dropdown__item">Careers</div>
                 </div>
               </div>
-              <div class="menu__item">
+              <div class="menu__item item__name--active">
                 <div class="item__name">
                   <div class="item__title">Connect</div>
-                  <div class="item__arrow item__arrowUp"></div>
+                  <div class="item__arrow item__arrowDown"></div>
                 </div>
-                <div class="item__dropdown">
+                <div class="item__dropdown item__dropdown--active">
                   <div class="dropdown__item">Contact</div>
                   <div class="dropdown__item">Newsletter</div>
                   <div class="dropdown__item">LinkedIn</div>
