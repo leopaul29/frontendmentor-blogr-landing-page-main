@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/leopaul29/frontendmentor-blogr-landing-page-main#readme",
   "devDependencies": {
-    "node-sass": "^6.0.0"
+    "node-sass": "^7.0.0"
   }
 }
